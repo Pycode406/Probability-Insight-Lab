@@ -4,12 +4,12 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="Probability Insight Lab", layout="wide")
 
-st.title("🧠 Probability Insight Lab")
+st.title(" Probability Insight Lab")
 st.markdown("### Binomial vs Poisson — Structural, Uncertainty & Stability Analysis")
 
 # ================= INPUT PANEL =================
 
-st.sidebar.header("🔢 Problem Parameters")
+st.sidebar.header(" Problem Parameters")
 
 n = st.sidebar.slider("Binomial Trials (n)", 10, 500, 50)
 p = st.sidebar.slider("Binomial Success Probability (p)", 0.01, 0.99, 0.1)
@@ -70,7 +70,7 @@ with col2:
 # ================= GRAPH 1: DISTRIBUTION SHAPE =================
 
 if "Distribution Shape" in modules:
-    st.markdown("## 🎲 Distribution Shape (Reality View)")
+    st.markdown("##  Distribution Shape (Reality View)")
 
     bin_samples = np.random.binomial(n, p, 6000)
     pois_samples = np.random.poisson(lam, 6000)
@@ -90,7 +90,7 @@ if "Distribution Shape" in modules:
 # ================= GRAPH 2: MEAN–VARIANCE GEOMETRY =================
 
 if "Mean-Variance Geometry" in modules:
-    st.markdown("## 📈 Mean–Variance Geometry (Structural View)")
+    st.markdown("##  Mean–Variance Geometry (Structural View)")
 
     p_vals = np.linspace(0.01, 0.99, 200)
     bin_means = n * p_vals
@@ -115,7 +115,7 @@ if "Mean-Variance Geometry" in modules:
 # ================= GRAPH 3: UNCERTAINTY LANDSCAPE =================
 
 if "Uncertainty Landscape" in modules:
-    st.markdown("## 🌊 Uncertainty Landscape (Risk View)")
+    st.markdown("##  Uncertainty Landscape (Risk View)")
 
     mean_range = np.linspace(1, 100, 200)
     bin_cv_curve = np.sqrt(mean_range*(1-p)) / mean_range
@@ -138,7 +138,7 @@ if "Uncertainty Landscape" in modules:
 # ================= GRAPH 4: STABILITY vs DISPERSION =================
 
 if "Stability vs Dispersion" in modules:
-    st.markdown("## ⚖️ Stability vs Dispersion (Control View)")
+    st.markdown("##  Stability vs Dispersion (Control View)")
 
     fig, ax = plt.subplots()
     ax.scatter(bin_var, bin_stability, color="blue", label="Binomial", s=80)
@@ -155,7 +155,7 @@ if "Stability vs Dispersion" in modules:
 # ================= GRAPH 5: SENSITIVITY HEATMAP =================
 
 if "Sensitivity Heatmap" in modules:
-    st.markdown("## 🧭 Parameter Sensitivity Heatmap (Behavior View)")
+    st.markdown("##  Parameter Sensitivity Heatmap (Behavior View)")
 
     p_grid = np.linspace(0.01, 0.99, 60)
     n_grid = np.linspace(10, 400, 60)
@@ -178,7 +178,7 @@ if "Sensitivity Heatmap" in modules:
 # ================= INSIGHT ENGINE =================
 
 if "Insight Engine" in modules:
-    st.markdown("## 🧠 Insight Engine (Mathematical Interpretation)")
+    st.markdown("##  Insight Engine (Mathematical Interpretation)")
 
     insights = []
 
@@ -205,6 +205,7 @@ if "Insight Engine" in modules:
 
 st.markdown("---")
 st.markdown("⚙️ Probability Insight Lab — exploring uncertainty, stability, and structure of distributions.")
+
 
 
 
