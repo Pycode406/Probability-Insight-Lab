@@ -49,7 +49,7 @@ pois_cv, pois_stability = metrics(pois_mean, pois_var)
 
 # ================= DISPLAY CORE STATS =================
 
-st.markdown("## 📌 Core Statistical Summary")
+st.markdown("##  Core Statistical Summary")
 
 col1, col2 = st.columns(2)
 
@@ -205,6 +205,7 @@ if "Insight Engine" in modules:
 
 st.markdown("---")
 st.markdown("⚙️ Probability Insight Lab — exploring uncertainty, stability, and structure of distributions.")
+
 
 
 
