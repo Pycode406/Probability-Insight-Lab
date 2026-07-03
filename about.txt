@@ -1,1 +1,0 @@
-This project demonstrates a clear difference between poisson and binomial distribution.
